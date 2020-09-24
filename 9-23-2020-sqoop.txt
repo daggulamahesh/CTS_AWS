@@ -15,5 +15,8 @@ hadoop fs -ls /
 sqoop-import --connect jdbc:mysql://karthick.curnhasvbn2n.ap-south-1.rds.amazonaws.com/
 test --username karthick -P --query "select * from customer where cust_id>1 
  AND \$CONDITIONS" --target-dir /karthickuk3 --split-by id -m 1
+ 
+ https://cognizant.webex.com/cognizant/j.php?MTID=m3987fbc49873df09cb28fc2b4e02c9d4
+
 
 
