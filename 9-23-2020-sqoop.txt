@@ -1,0 +1,19 @@
+hdfs commands
+how to work squop tools
+how to work with hive
+hoase
+
+
+hadoop@13 m.233.117.249
+hadoop fs -df -h
+df -h
+
+ls /
+
+hadoop fs -ls /
+
+sqoop-import --connect jdbc:mysql://karthick.curnhasvbn2n.ap-south-1.rds.amazonaws.com/
+test --username karthick -P --query "select * from customer where cust_id>1 
+ AND \$CONDITIONS" --target-dir /karthickuk3 --split-by id -m 1
+
+
