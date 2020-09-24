@@ -1,0 +1,51 @@
+karlist = ["lion","tiger","elephant","Camel"]
+print(karlist)
+print(karlist[0])
+print(karlist[1])
+print(karlist[2])
+print(karlist[-1])
+print(karlist[0:2])
+print(karlist[:1])
+print(karlist[0:-1])
+karlist[1] = "Camel"
+for x in karlist:
+ print(x)
+if "elephant" in karlist:
+ print("Yes, its avlail in the list")
+print(len(karlist))
+karlist.append("demo")
+for x in karlist:
+ print(x)
+karlist.insert(2,"demo2")
+for x in karlist:
+ print(x)
+karlist.remove("Camel")
+print(karlist)
+karlist.pop()
+print(karlist)
+karlist.pop(1)
+print(karlist)
+del karlist[1]
+print(karlist)
+karlist.clear()
+print(len(karlist))
+del karlist
+#print(karlist)
+karthick=["cherry","apple","banana"]
+selvam=karthick.copy()
+print(selvam)
+demo=list(karthick)
+print(demo)
+list1 =["a","b","c"]
+list2=[1,2,3]
+list3=list1+list2
+print(list3)
+a=["w","x","y","z"]
+b=[1,2,3,4]
+for x in b:
+ a.append(x)
+print(a)
+a.extend(b)
+print(a)
+a.reverse()
+print(a)
