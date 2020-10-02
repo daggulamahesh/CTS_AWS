@@ -1,0 +1,17 @@
+VPC
+Subnets
+Routs table
+internet gateway
+
+https://cloudacademy.com/course/amazon-vpc-networking/
+vpc-introduction/?context_resource=lp&context_id=954
+
+
+Auto Scaling
+https://www.youtube.com/watch?v=-hFAWk6hyZA&t=2168s
+
+https://www.youtube.com/watch?v=-hFAWk6hyZA&t=2168s
+
+what is cross region replication rule ?
+
+https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html
