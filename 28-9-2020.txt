@@ -1,0 +1,126 @@
+EC2
+S3
+EMR
+KINESIS
+Lambda
+DynamoDB
+Glue 
+Redshift
+
+athena
+data pipeline
+VPC
+
+
+smps --->bois----> boot Sector --->booting time ---power on os
+
+bois
+
+
+IAAS PAAS SAAS
+
+
+Iaas
+A vendor provides clients pay-as-you-go access to storage, 
+networking, servers and other computing resources in the cloud.
+Paas
+A service provider offers access to a cloud-based environment in which 
+users can build and deliver applications. The provider supplies underlying
+ infrastructure.
+Saas
+A service provider delivers software and applications through the internet.
+ Users subscribe to the software and access it via the web or vendor APIs.
+
+
+
+ec2-
+
+750 hours per month of Linux, RHEL, or SLES t2.micro or t3.micro instance dependent on region
+750 hours per month of Windows t2.micro or t3.micro instance dependent on region
+
+lambda-
+
+ 1,000,000 free requests per month
+Up to 3.2 million seconds of compute time per month
+
+dynamodb- 
+
+25 GB of Storage
+25 provisioned Write Capacity Units (WCU)
+25 provisioned Read Capacity Units (RCU)
+Enough to handle up to 200M requests per month. 
+redshift -
+ 750 DC2.Large node hours per month for 2 months
+
+AWS Glue
+
+1 Million
+objects stored in the AWS Glue Data Catalog
+Simple, flexible, and cost-effective extract, transform, and load (ETL) service.
+
+1 Million objects stored in the AWS Glue Data Catalog  
+1 Million requests made per month to the AWS Glue Data Catalog
+
+
+s3
+5 GB of Standard Storage
+20,000 Get Requests
+2,000 Put Requests
+
+data pipeline
+
+3 Low Frequency Preconditions
+5 Low Frequency Activities
+
+ Non-free
+
+EMR
+KINESIS
+ATHENA
+DATA PIPELINE
+VPC
+
+
+----------------
+EC2
+ElasticCompute Cloud
+Compute->
+
+
+AMI Amazon Machine Images
+
+AWS EC2 plans
+
+General purpose -> equal balance 
+
+RDP
+
+
+./Administrator
+
+
+
+
+--------------------------------
+Linux Machine
+
+
+apt-get update -y
+    2  apt-get install apache2 -y
+    3  systemctl status apache2
+    4  systemctl enable apache2
+    5  systemctl restart apache2
+    6  wget http://localhost
+    7  cat index.html
+    8  wget https://www.free-css.com/assets/files/free-css-templates/download/page258/loxury.zip
+    9  unzip loxury.zip
+   10  apt install unzip -y
+   11  unzip loxury.zip
+   12  ls
+   13  mv loxury/* /var/www/html/
+   14  history
+
+
+
+
+

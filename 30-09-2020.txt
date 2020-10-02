@@ -1,0 +1,23 @@
+S3
+File System
+NFS
+NTFS
+EXT1
+
+
+NAS
+ISCSI
+Block level storage
+Object level storage
+
+
+s3
+
+Repository -> buckets
+storage place that will save all  your object
+To create bucket rules and regulations
+s3 is the global service but buckets
+
+bucket policy
+
+VPC
