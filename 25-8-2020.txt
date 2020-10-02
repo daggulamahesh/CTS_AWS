@@ -1,0 +1,94 @@
+unzip filename.zip 
+to unzip the file command is gunzip
+
+awk '{print $0}' country2.txt
+awk '{print $1}' country2.txt
+awk -F ,'{print $1}' country2.txt
+awk -F, '{print $3 $1}' country2.txt
+cut -d ',' -f3,1 country2.txt
+
+echo 'this is a unix class'|awk '{print $4}'
+unix
+echo 'this is a unix class'|awk '{print $NF}'
+class
+
+you can search data by using awk command
+awk '/1/ {print $0}' filename
+1
+2
+3
+4
+
+get id>3
+
+
+awk '{if($3>3) print } ' filename
+
+awk '{if($1>10) print } ' filename
+
+wc -l country2.txt
+awk 'END  { print "number of lines in my file:",NR} ' country2.txt
+
+awk -F, '{if($1>10) print } ' filename
+awk -F,'{if($2=="vish") print } ' country.txt
+
+
+====================
+
+compress ----.z
+
+uncompress
+
+ziping the files
+
+gzip---- add zip formate to a specified file or files
+
+gzip filename
+filename.gz
+
+unzip the file
+
+gunzip filename.gz
+
+it display data in zip
+zcat filename.gz
+
+
+------------------------------------
+Background process or job controls:
+
+1) foreground jobs: a job which is executing without & symbol is called
+2) background jobs:a job which is executing with & symbol is called
+
+syntax:
+$cat file &
+
+-----------
+echo --printing statement
+ echo "hi" \t
+echo "hi" \v
+
+---------------------
+shell variable :variable is the data name and it is used to store value variable
+shell keywords:
+echo
+if
+read
+else
+if case
+wait
+done
+esac
+
+two types:
+system defined variables:
+local and global variables
+
+
+--------
+exporting variable:
+a=20
+export a
+sh
+
+
