@@ -1,0 +1,5 @@
+https://cloudacademy.com/lab/getting-started-amazon-elastic-mapreduce/
+
+
+https://cloudacademy.com/course/amazon-web-services-big-data-specialty-
+processing/emr-overview-1/

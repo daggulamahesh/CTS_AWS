@@ -1,0 +1,48 @@
+MapREduce
+Apache Spark
+https://www.tutorialspoint.com/apache_spark/apache_spark_introduction.htm
+
+There are three ways of Spark deployment as explained below.
+
+Standalone − Spark Standalone deployment means Spark occupies the place on top of
+ HDFS(Hadoop Distributed File System) and space is allocated for HDFS,
+ explicitly. Here, Spark and MapReduce will run side by side to cover all
+ spark jobs on cluster.
+
+Hadoop Yarn − Hadoop Yarn deployment means, simply, spark runs on
+ Yarn without any pre-installation or root access required. It helps to
+ integrate Spark into Hadoop ecosystem or Hadoop stack. It allows other components to run on top of stack.
+Spark in MapReduce (SIMR) − Spark in MapReduce is used to launch spark job in addition to standalone 
+deployment. With SIMR, user can start Spark and uses its shell without any administrative access.
+
+
+spark working procedure
+
+
+
+Pyspark- RDD
+
+parallelize method
+
+EC2@19.34.244$ Pyspark
+>>>Pyspark
+>>>import pyspark
+>>>from pyspark import SparkContext
+>>>karthick = sc.parallelize([1,2,3,4,5,6,7,8,9])
+>>>karthick.
+>>>
+
+
+
+
+--------------
+https://ec2-3-6-150-92.ap-south-1.compute.amazonaws.com:9443/hub/login?next=
+username:jovyan
+password:jupyter
+
+
+LaB
+
+https://cloudacademy.com/lab/getting-started-amazon-elastic-mapreduce/
+
+https://www.udemy.com/course/spark-and-python-for-big-data-with-pyspark/

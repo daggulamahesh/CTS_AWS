@@ -1,0 +1,93 @@
+TextFile Method
+
+------------------
+
+import from local file
+
+
+---------------
+ftp sftp
+
+rdd file
+
+//home/hadoop/paragraph.txt
+
+
+https://ec2-65-0-66-225.ap-south-1.compute.amazonaws.com:9443/
+
+
+from pyspark import SparkContext
+sc = SparkContext("local", "count app")
+words = sc.parallelize (
+   ["scala", 
+   "java", 
+   "hadoop", 
+   "spark", 
+   "akka",
+   "spark vs hadoop", 
+   "pyspark",
+   "pyspark and spark"]
+)
+counts = words.count()
+print (counts)
+
+
+from Karthick Selvam to All Participants:
+
+from pyspark import SparkContext
+sc = SparkContext("local", "Filter app")
+words = sc.parallelize (
+   ["scala", 
+   "java", 
+   "hadoop", 
+   "spark", 
+   "akka",
+   "spark vs hadoop", 
+   "pyspark",
+   "pyspark and spark"]
+)
+words_filter = words.filter(lambda x: 'spark' in x)
+filtered = words_filter.collect()
+print(filtered)
+
+
+from pyspark import SparkContext
+sc = SparkContext("local", "Map app")
+words = sc.parallelize (
+   ["scala", 
+   "java", 
+   "hadoop", 
+   "spark", 
+   "akka",
+   "spark vs hadoop", 
+   "pyspark",
+   "pyspark and spark"]
+)
+words_map = words.map(lambda x: (x, 1))
+mapping = words_map.collect()
+print "Key value pair -> %s" % (mapping
+
+
+
+from pyspark import SparkContext
+from operator import add
+sc = SparkContext("local", "Reduce app")
+nums = sc.parallelize([1, 2, 3, 4, 5])
+adding = nums.reduce(add)
+print "Adding all the elements -> %i" % (adding)
+from Karthick Selvam to All Participants:
+----------------------------------------join.py---------------------------------------
+from pyspark import SparkContext
+sc = SparkContext("local", "Join app")
+x = sc.parallelize([("spark", 1), ("hadoop", 4)])
+y = sc.parallelize([("spark", 2), ("hadoop", 5)])
+joined = x.join(y)
+final = joined.collect()
+print "Join RDD -> %s" % (final)
+
+
+
+flatmap
+
+
+spark transformations and actions
