@@ -1,0 +1,65 @@
+hiveconf hive.support.sql11.reserved.keywords=false\
+
+
+
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+
+
+$ sudo mysql -u root # I had to use "sudo" since is new installation
+
+mysql> USE mysql;
+mysql> SELECT User, Host, plugin FROM mysql.user;
+
++------------------+-----------------------+
+| User             | plugin                |
++------------------+-----------------------+
+| root             | auth_socket           |
+| mysql.sys        | mysql_native_password |
+| debian-sys-maint | mysql_native_password |
++------------------+-----------------------+
+
+
+
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+
+
+
+
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+
+I once had this problem and solved it by installing mysql-server, so make sure that you have installed the mysql-server, not the mysql-client or something else.
+
+That error means the file /var/run/mysqld/mysqld.sock doesn't exists, if you didn't install mysql-server, then the file would not exist. So in that case, install it with
+
+sudo apt-get install mysql-server
+But if the mysql-server is already installed and is running, then you need to check the config files.
+
+The config files are:
+
+/etc/my.cnf
+/etc/mysql/my.cnf
+/var/lib/mysql/my.cnf
+In /etc/my.cnf, the socket file config may be /tmp/mysql.sock and in /etc/mysql/my.cnf 
+the socket file config may be /var/run/mysqld/mysqld.sock. So, remove or rename
+ /etc/mysql/my.cnf, let mysql use /etc/my.cnf, then the problem may solved.
+ 
+ wget https://karthickselvam.s3.ap-south-1.amazonaws.com/2007.csv
+sudo wget file:///C:/Users/844569/Downloads/mysql-connector-java-5.1.49.zip
+
+mysql_secure_installation -----for changing mysql password
+ systemctl status mysql.service
+sudo vim /etc/my.cnf
+sudo chown -R mysql:mysql  /mysqlfiles
+
+~# sudo mkdir /mysqlfiles
+# sudo vim /etc/my.cnf
+mysql --local-infile=1 -u root -p
+
+cp 2007.csv /var/lib/mysql-files/2008.csv
+
+LOAD DATA LOCAL INFILE '/root/2007.csv' 
+INTO TABLE record_2007 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
