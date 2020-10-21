@@ -63,3 +63,16 @@ INTO TABLE record_2007
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n';
+
+
+
+
+-----------------------------------------
+
+
+https://computingforgeeks.com/how-to-solve-mysql-server-is-running-with-the-secure-file-priv-error/
+
+
+
+
+How to solve “MySQL server is running with the –secure-file-priv” Error
