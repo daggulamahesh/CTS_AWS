@@ -1,0 +1,171 @@
+$sqoop import --connect jdbc:mysql://34.222.49.133/project --username sinatra -P --table sinatra
+ -m 1
+
+
+
+----------------------
+How to solve “MySQL server is running with the –secure-file-priv” Error
+
+https://computingforgeeks.com/how-to-solve-mysql-server-is-running-with-the-secure-file-priv-error/
+--------------------------------------------
+
+ spark configurations
+How do I configure Amazon EMR to run a PySpark job using Python 3.4 or 3.6?
+
+https://aws.amazon.com/premiumsupport/knowledge-center/emr-pyspark-python-3x/
+
+---------------------------------------------------------------
+
+sqoop import --connect jdbc:mysql://13.235.67.29/project --username demo -P --table record_2007 --hive-import –hive-table project.record_2007 -m 1
+
+
+-----------dummy---------------------------------
+Sqoop import --connect jdbc:mysql://65.0.30.53/project –username demo –password cloudera --split-by FlightNum –table record_2007
+ –target-dir /user/cloudera/record_2007/ --hive-import –hive-table project.record_2007 -m 1
+====================
+
+ ls
+    2  cp mysql-connector-java-8.0.21/'mysql-connector-java-8.0.21.jar'
+    3  cp mysql-connector-java-8.0.21/mysql-connector-java-8.0.21.jar .
+    4  ls -la
+    5  sqoop import --connect jdbc:mysql://13.235.67.29/project --username demo -P --table record_2007 -m 1
+    6  sudo cp mysql-connector-java-8.0.21.jar /usr/lib/sqoop
+    7  ls -la /usr/
+    8  ls -la /usr/sqoop
+    9  ls -la /usr/sqoop/
+   10  sudo cp mysql-connector-java-8.0.21.jar /usr/lib/sqoop/
+   11  ls -la /usr/sqoop/
+   12  ls -la /usr/
+   13  ls -la /usr/lib/sqoop/
+   14  sqoop import --connect jdbc:mysql://13.235.67.29/project --username demo -P --table record_2007 -m 1
+   15  hive
+
+------------------------------------------------------------------------------
+
+EMR 
+
+    1  mysql -h 52.66.151.25 -u demo -p
+    2  mysql -h 52.66.151.25:3306 -u demo -p 
+    3  mysql -h 52.66.151.25 -u demo -p 
+    4  sqoop import --connect jdbc:mysql://52.66.151.25/project --username demo -P --table karthick -m 1
+    5  wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-8.0.22.zip
+    6  ls
+    7  unzip mysql-connector-java-8.0.22.zip 
+    8  ls
+    9  cp mysql-connector-java-8.0.22/mysql-connector-java-8.0.22.jar 
+   10  cp mysql-connector-java-8.0.22/mysql-connector-java-8.0.22.jar .
+   11  ls -la
+   12  sudo cp mysql-connector-java-8.0.22.jar /usr/lib/sqoop/
+   13  ls -la /usr/
+   14  ls -la /usr/lib/sqoop/
+   15  sqoop import --connect jdbc:mysql://52.66.151.25/project --username demo -P --table karthick -m 1
+   16  history 
+from Pavan Kumar Molleti to All Participants:
+thank you sir
+
+sql Ubantu
+
+from Karthick Selvam to All Participants:
+1  apt-get update -y
+    2  spt-get install mysql-server
+    3  apt-get install mysql-server
+    4  mysql_secure_installation 
+    5  systemctl status mysql.service 
+    6  systemctl enable mysql.service 
+    7  cd /etc/mysql/
+    8  clear
+    9  pwd
+   10  ls -la
+   11  cp mysql.cnf my.cnf
+   12  cat mysql.cnf 
+   13  ls -la /var/lib/mysql
+   14  ls -la /var/lib/mysql/
+   15  ls -la /var/lib/mysql/mysql
+   16  mkdir /var/lib/mysql/mysql-files
+   17  chown mysql:mysql ssh -i "emr.pem" ubuntu@ec2-52-66-151-25.ap-south-1.compute #don't compile
+   18  chown -R mysql:mysql /var/lib/mysql/mysql-files/
+   19  vi mysql.cnf 
+   20  cd mysql.conf.d/
+   21  ls
+   22  vi mysqld.cnf 
+   23  systemctl restart mysql.service 
+   24  mysql -u root -p
+   25  mysql -u root -p --local-infile=1
+   26  cd
+   27  clear
+   28  apt-get install aws-cli -y
+   29  apt-get install awscli -y
+   30  clear
+   31  aws s3 cp s3://karthick1808/2007.csv .
+   32  ls
+   33  mysql -u root -p --local-infile=1
+   34  systemctl status mysql
+from Karthick Selvam to All Participants:
+35  cd /etc/mysql/mysql.conf.d/
+   36  ls
+   37  vi mysqld.cnf 
+   38  systemctl restart mysql.service 
+   39  mysql -u root -p --local-infile=1
+   40  mysql -u root -p
+   41  mysql -u root -p
+   42  mysql -V
+   43  mysql -u root -p
+   44  systemctl restart mysql.service 
+   45  cd /etc/mysql/
+   46  ls
+   47  cd mysql.conf.d/
+   48  vi mysqld.cnf 
+   49  cd ..
+   50  ls
+   51  vi my.cnf
+   52  systemctl restart mysql.service 
+   53  vi my.cnf
+   54  vi mysql.conf.d/mysqld.cnf 
+   55  systemctl restart mysql.service 
+   56  cat my.cnf
+   57  vi mysql.conf.d/mysqld.cnf 
+   58  systemctl restart mysql.service 
+   59  systemctl status mysql.service
+   60  1
+   61  systemctl status mysql.service
+   62  systemctl restart mysql.service 
+   63  ls
+   64  vi my.cnf
+   65  vi mysql.conf.d/mysqld.cnf 
+   66  systemctl restart mysql.service 
+   67  vi mysql.conf.d/mysqld.cnf 
+   68  systemctl restart mysql.service
+from Karthick Selvam to All Participants:
+69  vi mysql.conf.d/mysqld.cnf 
+   70  systemctl restart mysql.service 
+   71  vi mysql.conf.d/mysqld.cnf 
+   72  systemctl restart mysql.service 
+   73  vi mysql.conf.d/mysqld.cnf 
+   74  systemctl restart mysql.service 
+   75  sudo ufw allow from remote_IP_address to any port 3306
+   76  sudo ufw allow from 0.0.0.0 to any port 3306
+   77  systemctl restart mysql.service 
+   78  mysql -u root -p
+   79  systemctl restart mysql.service 
+   80  history 
+
+from Pavan Kumar Molleti to All Participants:
+tq sir
+from Sinatra V Salgaonkar to All Participants:
+thank you very much sir
+from Pavan Kumar Molleti to All Participants:
+yes sir
+from Sinatra V Salgaonkar to All Participants:
+yes sir
+
+
+from pyspark.sql import HiveContext
+from pyspark.context import SparkContext
+sc = SparkContext.getOrCreate ("local", "MyApp")
+com = HiveContext(sc)
+df = com.sql(" select * from default.record_2007 limit 10 ")
+
+
+
+com.select Dest,TailNum,count(tailnum) as Total_count from project.record_2007 where TailNum != 'NA' and TailNum  NOT LIKE '0%' group by Dest, TailNum order by Total_count desc,dest
+
