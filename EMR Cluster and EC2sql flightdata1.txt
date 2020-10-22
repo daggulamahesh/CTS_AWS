@@ -28,7 +28,9 @@ Sqoop import --connect jdbc:mysql://65.0.30.53/project –username demo –passw
     2  cp mysql-connector-java-8.0.21/'mysql-connector-java-8.0.21.jar'
     3  cp mysql-connector-java-8.0.21/mysql-connector-java-8.0.21.jar .
     4  ls -la
-    5  sqoop import --connect jdbc:mysql://13.235.67.29/project --username demo -P --table record_2007 -m 1
+    5  sqoop import --connect jdbc:mysql://13.235.67.29/project --username demo -P --table record_2007 --hive-import -m 1
+    or 
+    5 sqoop import --connect jdbc:mysql://65.0.30.53/project --username demo -P --table record_2007 --hive-import -m 1
     6  sudo cp mysql-connector-java-8.0.21.jar /usr/lib/sqoop
     7  ls -la /usr/
     8  ls -la /usr/sqoop
