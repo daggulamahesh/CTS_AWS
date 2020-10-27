@@ -1,0 +1,35 @@
+2  sudo apt-get update -y
+    3  apt-get install -y python3-venv
+    4  sudo apt-get install -y python3-venv
+    5  cd airline
+    6  mkdie airline
+    7  mkdir airline
+    8  cd airline/
+    9  python3 -m venv airline
+   10  ls
+   11  source airline/bin/activate
+   12  exit() exit
+   13  sudo apt-get install default-jre -y
+   14  sudo apt-get install scala -y
+   15  ls
+   16  pip install jupyter
+   17  pip install pyspark
+   18  pip install jupyter
+   19  pip install py4j
+   20  pip install findspark
+   21  jupyter notebook --generate-config
+   22  ls
+   23  ls -la /home/ubuntu/.jupyter/
+   24  vim ~/.jupyter/jupyter_notebook_config.py
+   25  exit
+   26  cd airline/
+   27  source airline/bin/activate
+   28  jupyter notebook
+   29  history 
+
+
+
+conf = get_config()
+conf.NotebookApp.ip = '0.0.0.0'
+conf.NotebookApp.password = u'sha1:c0137b74fbd5:b1dec92d92bbe9e08a7d76f5dfddd7d563d0d607'
+conf.NotebookApp.port = 8888
