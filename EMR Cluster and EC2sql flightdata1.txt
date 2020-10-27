@@ -171,3 +171,21 @@ df = com.sql(" select * from default.record_2007 limit 10 ")
 
 com.select Dest,TailNum,count(tailnum) as Total_count from project.record_2007 where TailNum != 'NA' and TailNum  NOT LIKE '0%' group by Dest, TailNum order by Total_count desc,dest
 
+
+CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+FLUSH PRIVILEGES;
+
+ALTER USER 'demo'@'%' IDENTIFIED WITH mysql_native_password BY 'Welcome!01';
+FLUSH PRIVILEGES;
+
+
+sc = SparkContext.getOrCreate (("local", "MyApp"))
+df = com.sql(" select * from record_2007 limit 10 ")
+
+
+
+com.sql("select distinct(FlightNum) as FLIGHT_NUM,month,avg(WeatherDelay) as Average_Weather_Delay from  project.record_2007 group by FlightNum,Month order by flight_num,month
+").show()
+
+com.sql("select distinct FlightNum,sum(Distance) as SUM_DISTANCE,Month fromproject.record_2007 group by Month,FlightNum").show()
