@@ -71,8 +71,58 @@ LINES TERMINATED BY '\n';
 
 
 https://computingforgeeks.com/how-to-solve-mysql-server-is-running-with-the-secure-file-priv-error/
-
-
-
-
 How to solve “MySQL server is running with the –secure-file-priv” Error
+----------------------------------------------------
+
+
+
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SELECT User FROM mysql.user;
++------------------+
+| User             |
++------------------+
+| debian-sys-maint |
+| mysql.infoschema |
+| mysql.session    |
+| mysql.sys        |
+| root             |
++------------------+
+5 rows in set (0.00 sec)
+
+mysql>  ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'welcome01';
+ERROR 1819 (HY000): Your password does not satisfy the current policy requirements
+mysql>  ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'Welcome!01';
+ERROR 1396 (HY000): Operation ALTER USER failed for 'root'@'%'
+mysql> CREATE USER 'demo'@'%' IDENTIFIED BY 'Welcome!0;
+    '> ;
+    '>
+[2]+  Stopped                 mysql -u root -p --local-infile=1
+root@ip-172-31-3-3:~# mysql -u root -p --local-infile=1
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 15
+Server version: 8.0.21-0ubuntu0.20.04.4 (Ubuntu)
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE USER 'demo'@'%' IDENTIFIED BY 'Welcome!0';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> GRANT ALL PRIVILEGES ON . TO 'demo'@'%';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '. TO 'demo'@'%'' at line 1
+mysql> GRANT ALL PRIVILEGES ON TO 'demo'@'%';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO 'demo'@'%'' at line 1
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'demo'@'%';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.01 sec)
+
