@@ -189,3 +189,27 @@ com.sql("select distinct(FlightNum) as FLIGHT_NUM,month,avg(WeatherDelay) as Ave
 ").show()
 
 com.sql("select distinct FlightNum,sum(Distance) as SUM_DISTANCE,Month fromproject.record_2007 group by Month,FlightNum").show()
+
+
+
+com.sql("select distinct(FlightNum) as FLIGHT_NUM,month,avg(WeatherDelay) as Average_Weather_Delay from record_2007 group by FlightNum,Month order by flight_num,month").show()
+
+com.sql("select distinct FlightNum,sum(Distance) as SUM_DISTANCE,Month from record_2007 group by Month,FlightNum").show()
+select month,TailNum,FlightNUm from record_2007 where Cancelled = 1 AND month In (10,11,12) group by  month,FLightnum,TailNum order by month
+SET GLOBAL local_infile=1;
+com.sql("select month,TailNum,FlightNUm from record_2007 where Cancelled = 1 AND month In (10,11,12) group by  month,FLightnum,TailNum order by month").show()
+com.sql("select distinct FlightNum,sum(Distance) as SUM_DISTANCE,Month from record_2007 group by Month,FlightNum").show()
+
+
+com.sql("select count(FlightNum) as Count_DIVERTED,month from record_2007 where diverted=1 group by month").show()
+com.sql("select month,case when dayofmonth between 1 and 7 then '1' when dayofmonth between 8 and 14 then '2' when dayofmonth between 15 and 21 then '3' when dayofmonth between 22 and 28 then '4' when dayofmonth between 29  and 31 then '5' else 'default' end as week ,flightnum,count (FlightNum) as count from record_2007 where  cancelled=0 group by flightnum,month,dayofmonth order by month,week").show()
+
+df8=com.sql("select month,tailnum,count(origin) as trips from record_2007 where cancelled=0 group by month,tailnum order by month,trips desc")
+
+
+com.sql("select distinct FlightNum,sum(Distance) as SUM_DISTANCE,Month from record_2007 group by Month,FlightNum").show()
+com.sql("select distinct FlightNum,sum(Distance) as SUM_DISTANCE,Month from record_2007 group by Month,FlightNum").show()
+com.sql("select distinct FlightNum,sum(Distance) as SUM_DISTANCE,Month from record_2007 group by Month,FlightNum").show()
+
+
+
